@@ -100,10 +100,10 @@ def patchAutograder(line: str) -> str:
     return line.replace('</body>', '\n<script src="'+dj4e_autograder+'"></script>\n</body>')
 
 def httpServer(router, port):
-    print('\n================ Starting mini_django server on '+str(port))
+    print(f'\n================ Starting mini_django server on {port}')
     serversocket = socket(AF_INET, SOCK_STREAM)
     try :
-        serversocket.bind(('localhost',port))
+        serversocket.bind(('0.0.0.0',port))
         serversocket.listen(5)
         while(1):
             print('\n================ Waiting for the Next Request')
