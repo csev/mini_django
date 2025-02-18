@@ -6,9 +6,9 @@ from mini_django import HttpRequest, HttpResponse
 def root(req: HttpRequest) -> HttpResponse:
     res = HttpResponse()
     res.headers['Content-Type'] = 'text/html; charset=utf-8'
-    res.write("<!DOCTYPE html>");
+    res.write("<!DOCTYPE html>")
     res.write("<html><head></head><body>")
-    res.write("<p>mini_django seems to be working!</p>");
+    res.write("<p>mini_django seems to be working!</p>")
     res.write("<p>This is the page at the root path, try another path</p>")
     res.write("<p>Try /dj4e /js4e or generate errors with /missing or /broken</p>")
     res.write("</body></html>")
