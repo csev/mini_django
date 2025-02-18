@@ -5,7 +5,7 @@ import views
 # This is similar to Django's urls.py
 
 def router(request: HttpRequest) -> HttpResponse:
-    print('==== Routing to path:', request.path);
+    print('==== Routing to path:', request.path)
     if request.path == '/' : 
         return views.root(request)
     elif request.path.startswith('/dj4e') : 
