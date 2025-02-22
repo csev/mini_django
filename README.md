@@ -87,7 +87,7 @@ The autograder library is only included in `text/html` responses.
 
 If you want include the autograder library in your application start the web server as follows:
 
-    python ruserver.py 9000 autograder
+    python runserver.py 9000 autograder
 
 Assuming you have DJ4E running on your computer, you can  do development with a local
 copy of the autograder JavaScript endpoint as follows:
