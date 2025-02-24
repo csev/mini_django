@@ -167,8 +167,9 @@ def view_fail(req: HttpRequest, code: str, failure: str) -> HttpResponse:
         res.write('<div><b>Response Code:</b> '+res.code+'</div>')
     res.write("</div><pre>")
     res.write("Valid paths: /dj4e /js4e or /404")
-    res.write("\nRequest header data:")
-    res.write(json.dumps(req.headers, indent=4))
+    if isinstance(req, HttpRequest) :
+        res.write("\nRequest header data:")
+        res.write(json.dumps(req.headers, indent=4))
     res.write("</pre></body></html>")
     return res
 
