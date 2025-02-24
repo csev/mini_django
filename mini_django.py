@@ -152,7 +152,7 @@ def view_fail(req: HttpRequest, code: str, failure: str) -> HttpResponse:
 
     res.headers['Content-Type'] = 'text/html; charset=utf-8'
 
-    res.write("<!DOCTYPE html>");
+    res.write("<!DOCTYPE html>")
     res.write('<html><body>')
     if res.code == "404" :
         res.write('<div style="background-color: rgb(255, 255, 204);">')
@@ -160,10 +160,11 @@ def view_fail(req: HttpRequest, code: str, failure: str) -> HttpResponse:
         res.write('<div style="background-color: pink;">')
 
     res.write('<b>Page has errors</b>')
-    res.write('<div><b>Request Method:</b> '+req.method+"</div>")
-    res.write('<div><b>Request URL:</b> '+req.path+'</div>')
-    res.write('<div><b>Response Failure:</b> '+failure+'</div>')
-    res.write('<div><b>Response Code:</b> '+res.code+'</div>')
+    if isinstance(req, HttpRequest) :
+        res.write('<div><b>Request Method:</b> '+req.method+"</div>")
+        res.write('<div><b>Request URL:</b> '+req.path+'</div>')
+        res.write('<div><b>Response Failure:</b> '+failure+'</div>')
+        res.write('<div><b>Response Code:</b> '+res.code+'</div>')
     res.write("</div><pre>")
     res.write("Valid paths: /dj4e /js4e or /404")
     res.write("\nRequest header data:")
