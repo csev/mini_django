@@ -6,7 +6,7 @@ This is a very small Python web server that takes inspiration from Django.
 
 This is supposed to run on *your* computer - not PythonAnywhere.   So you should use
 Terminal on Mac or Linux or the Command Shell on Windows.  You need to have a recent version
-of `python` and `git` installed.  You can check this with:
+of `python` and `git` installed.  You can check your Python version with:
 
     python --version
 
