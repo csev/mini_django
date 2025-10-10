@@ -4,6 +4,12 @@ Mini Django Web Server
 
 This is a very small Python web server that takes inspiration from Django. 
 
+This is supposed to run on *your* computer - not PythonAnywhere.   So you should use
+Terminal on Mac or Linux or the Command Shell on Windows.  You need to have a recent version
+of `python` and `git` installed.  You can check this with:
+
+    python --version
+
 To install this source code, you can either
 
 * Use `git` to checkout this repository into a folder
@@ -18,6 +24,10 @@ have Python installed), you navigate into the folder and run the server.
 
     cd mini_django
     python runserver.py
+
+If you are submitting this to the autograder for DJ4E, use this command:
+
+    python runserver.py 9000 autograder
 
 And navigate to http://localhost:9000
 
